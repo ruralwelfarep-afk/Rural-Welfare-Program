@@ -152,14 +152,20 @@ export default function Home() {
             </p>
 
             <div className="border-l-4 border-[#f0c020] pl-4 mb-4 bg-[#fffdf0] py-3 pr-3 rounded-r-xl">
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                <span className="font-semibold text-[#1a5c2a]">UNDP's</span> work proves that investing in development makes things possible. By connecting prosperity, climate, energy, nature, resilience, innovation and digitalization, we are reaching — and exceeding — our global ambitions while accelerating progress.
-              </p>
-            </div>
+  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+    Our initiatives are inspired by global development goals focused on sustainability,
+    community health, and empowerment of rural populations.
+  </p>
+</div>
 
-            <p className="text-gray-500 leading-relaxed mb-7 text-sm sm:text-base">
-              When you join UNDP, you are dedicating your energy, time and skills towards building a more prosperous, fair and inclusive world — collaborating and innovating towards a better future for all.
-            </p>
+<p className="text-gray-500 leading-relaxed mb-7 text-sm sm:text-base">
+  We work at the grassroots level to create awareness, support community health,
+  and promote self-reliance among rural populations.
+</p>
+
+<p className="text-red-600 font-semibold text-sm mb-5">
+  We are not a government organization and do not provide any सरकारी नौकरी or scheme approval.
+</p>
 
             <div className="flex flex-wrap gap-3">
               <a

@@ -10,12 +10,20 @@ const razorpay = new Razorpay({
 })
 
 // Fee table (paise) — defined server-side, never trusted from client
+// const FEE_TABLE = {
+//   General: 110000, // ₹1,100
+//   OBC:     100000, // ₹1,000
+//   SC:      100000,
+//   ST:      100000,
+//   EWS:     100000,
+// }
+
 const FEE_TABLE = {
-  General: 110000, // ₹1,100
-  OBC:     100000, // ₹1,000
-  SC:      100000,
-  ST:      100000,
-  EWS:     100000,
+  General: 100,  // ₹1
+  OBC:     100,
+  SC:      100,
+  ST:      100,
+  EWS:     100,
 }
 
 export default async function handler(req, res) {
