@@ -6,6 +6,7 @@ import AboutPage from './pages/About'
 import ContactPage from './pages/Contact'
 import Registration from './pages/Registration'
 import ApplyFormPage from './pages/ApplyFormPage'
+import SuccessPage  from './pages/SuccessPage'
 const PlaceholderPage = ({ title }) => (
   <div className="min-h-screen flex items-center justify-center">
     <div className="text-center">
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/registration" element={<Registration />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/apply" element={<ApplyFormPage />} />
+            <Route path="/success" element={<SuccessPage />} />
             <Route path="*" element={<PlaceholderPage title="Page Not Found" />} />
           </Routes>
         </div>

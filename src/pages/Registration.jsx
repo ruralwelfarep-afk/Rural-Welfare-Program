@@ -1,27 +1,27 @@
-// PostsPage.jsx
+// src/pages/PostsPage.jsx
 // Shows post cards — clicking Apply navigates to /apply with post data via React Router state
 
 import { useNavigate } from 'react-router-dom'
 
-const posts = [
+export const posts = [
   {
     id: 1,
     title: 'Assistant Health Worker',
     level: 'Post 1',
-    // salary: '₹2,200/month',
     ageLimit: '18 – 50 Years',
     feeGeneral: '₹1,100',
     feeOBC: '₹1,000',
+    feeAmount: { General: 110000, OBC: 100000, SC: 100000, ST: 100000, EWS: 100000 },
     eligibility: ['12th Pass or above', 'Rural area women', 'Dedication to service'],
   },
   {
     id: 2,
     title: 'Health Worker',
     level: 'Post 2',
-    // salary: '₹2,500/month',
     ageLimit: '18 – 50 Years',
     feeGeneral: '₹1,100',
     feeOBC: '₹1,000',
+    feeAmount: { General: 110000, OBC: 100000, SC: 100000, ST: 100000, EWS: 100000 },
     eligibility: ['12th Pass or above', 'Rural area women', 'Interest in social work'],
   },
 ]
@@ -40,7 +40,7 @@ export default function Registration() {
       <section className="bg-gradient-to-r from-[#1a5c2a] to-[#4a9e5c] py-14 md:py-20 text-center">
         <div className="max-w-2xl mx-auto px-4">
           <span className="text-[#f0c020] uppercase text-xs font-bold tracking-widest">
-            Recruitment 2024
+            Recruitment 2026
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3 leading-tight">
             Application Form
@@ -68,7 +68,7 @@ export default function Registration() {
           {posts.map((post) => (
             <div
               key={post.id}
-              className="rounded-2xl border-2 border-[#1a5c2a] p-6 sm:p-8 relative overflow-hidden hover:bg-[#1a5c2a] group transition-all duration-300 cursor-pointer"
+              className="rounded-2xl border-2 border-[#1a5c2a] p-6 sm:p-8 relative overflow-hidden hover:bg-[#1a5c2a] group transition-all duration-300"
             >
               <div className="absolute top-4 right-4 bg-[#f0c020] text-[#1a5c2a] text-xs font-bold px-2 py-1 rounded">
                 {post.level}
@@ -77,7 +77,12 @@ export default function Registration() {
               <h3 className="text-[#1a5c2a] group-hover:text-white font-bold text-base sm:text-lg mb-2 transition-colors">
                 {post.title}
               </h3>
-              <p className="text-[#f0c020] font-bold text-xl sm:text-2xl mb-4">{post.salary}</p>
+              <p className="text-gray-500 group-hover:text-green-200 text-xs mb-1 transition-colors">
+                Age Limit: {post.ageLimit}
+              </p>
+              <p className="text-[#f0c020] font-bold text-sm mb-3">
+                Fee: {post.feeGeneral} (Gen) / {post.feeOBC} (OBC/SC/ST)
+              </p>
               <ul className="text-gray-600 group-hover:text-green-100 text-xs sm:text-sm space-y-1.5 mb-6 transition-colors">
                 {post.eligibility.map((e, j) => (
                   <li key={j}>✓ {e}</li>
